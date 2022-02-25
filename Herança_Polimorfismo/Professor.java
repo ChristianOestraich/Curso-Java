@@ -27,6 +27,10 @@ public class Professor extends Pessoa
         this.matricula = matricula;
     }
 
+    
+    /** 
+     * @return String
+     */
     @Override
     public String toString() 
     {

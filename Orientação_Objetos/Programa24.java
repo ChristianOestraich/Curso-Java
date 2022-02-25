@@ -2,6 +2,10 @@ package Orientação_Objetos;
 
 public class Programa24 
 {
+    
+    /** 
+     * @param args
+     */
     public static void main( String[] args ) 
     {
         Pessoa pessoa = new Pessoa();

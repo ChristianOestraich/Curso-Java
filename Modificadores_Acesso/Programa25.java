@@ -2,6 +2,10 @@ package Modificadores_Acesso;
 
 public class Programa25 
 {
+    
+    /** 
+     * @param args
+     */
     public static void main( String[] args ) 
     {
         Cliente joao = new Cliente( "Jão da Silva", "Rua da Paz, 45" );

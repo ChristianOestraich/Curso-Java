@@ -73,6 +73,10 @@ public class Produto
         return desconto;
     }
 
+    
+    /** 
+     * @param valor
+     */
     void aumentar_preco( float valor )
     {
         this.preco = this.preco + valor;

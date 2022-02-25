@@ -20,14 +20,26 @@ public class Conta
         this.cliente = cliente;
     }
 
+    
+    public Conta( String string ) {}
+
+    /** 
+     * @param valor
+     */
     public void sacar( float valor )
     {
         if ( valor <= this.saldo )
         {
             this.saldo = this.saldo - valor;
         }
+
+        System.out.println( "Saldo realizado com sucesso!!!" );
     }
 
+    
+    /** 
+     * @param valor
+     */
     public void depositar( float valor )
     {
         if ( valor >= this.saldo )
@@ -100,4 +112,15 @@ public class Conta
         this.cliente = cliente;
     }
     
+    @Override
+    public String toString() 
+    {
+        return "O saldo da conta é " + this.saldo;
+    }
+
+    @Override
+    public boolean equals( Object obj ) 
+    {
+        return ( (Conta) obj ).getSaldo() == this.getSaldo();
+    }
 }

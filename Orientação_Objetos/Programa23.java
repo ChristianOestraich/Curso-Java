@@ -2,6 +2,10 @@ package Orientação_Objetos;
 
 public class Programa23 
 {
+    
+    /** 
+     * @param args
+     */
     public static void main( String[] args ) 
     {        
         Produto produto = new Produto();

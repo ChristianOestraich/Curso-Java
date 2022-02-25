@@ -5,6 +5,10 @@ package Matrizes;
  */
 public class Programa19 
 {
+    
+    /** 
+     * @param args
+     */
     public static void main( String[] args ) 
     {
         int numeros[][] = new int[ 3 ][ 3 ];
