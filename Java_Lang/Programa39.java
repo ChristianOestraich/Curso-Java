@@ -6,8 +6,8 @@ public class Programa39
 {
     public static void main( String[] args ) 
     {
-        Cliente cliente1 = new Cliente( "João dos Santos", "Rua da paz 45" );
-        Cliente cliente2 = new Cliente( "Maria dos Santos", "Rua da paz 46" );
+        Cliente cliente1 = new Cliente( 67, "João dos Santos", "Rua da paz 45" );
+        Cliente cliente2 = new Cliente( 20, "Maria dos Santos", "Rua da paz 46" );
 
         Conta conta1 = new Conta( 1, 200, 300, cliente1 );
         Conta conta2 = new Conta( 1, 200, 300, cliente2 );
@@ -30,6 +30,6 @@ public class Programa39
         prateleira.adicionar( conta1 );
         prateleira.adicionar( conta2 );
 
-        System.out.println( prateleira.pegar( 0 ).getSaldo() );
+        System.out.println( ( (Conta) prateleira.pegar( 0 ) ).getSaldo() );
     }
 }

@@ -7,7 +7,7 @@ import Modificadores_Acesso.Conta;
 
 public class Principal 
 {
-    static Cliente cliente = new Cliente( "Mateus Moura", "Rua da paz, 45" );
+    static Cliente cliente = new Cliente( 60, "Mateus Moura", "Rua da paz, 45" );
     static Conta conta = new Conta( 1, 200, 300, cliente );
     static Scanner teclado = new Scanner( System.in );
 

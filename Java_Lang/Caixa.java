@@ -1,25 +1,23 @@
 package Java_Lang;
 
-import Modificadores_Acesso.Conta;
-
 public class Caixa 
 {
-    private Conta[] contas;
+    private Object[] objects;
     private int posicaoLivre;
 
     public Caixa ()
     {
-        contas = new Conta[100];
+        objects = new Object[100];
         posicaoLivre = 0;
     }
 
-    public void adicionar( Conta nova )
+    public void adicionar( Object nova )
     {
-        this.contas[this.posicaoLivre] = nova;
+        this.objects[this.posicaoLivre] = nova;
     }
 
-    public Conta pegar( int posicao )
+    public Object pegar( int posicao )
     {
-        return this.contas[posicao];
+        return this.objects[posicao];
     }
 }
