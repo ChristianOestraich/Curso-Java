@@ -1,6 +1,7 @@
 package Collections;
 
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 public class Programa48 
@@ -9,14 +10,30 @@ public class Programa48
     {
         Set<String> nomes = new HashSet<String>();
 
-        nomes.add( "Maria" );
-        nomes.add( "João" );
-        nomes.add( "José" );
-        nomes.add( "Mateus" );
+        Scanner teclado = new Scanner( System.in );
+
+        boolean res;
+
+        for ( int i = 0; i < args.length; i++ ) 
+        {
+            System.out.println( "Informe o " + ( i + 1 ) + "/5 nomes: " );
+            String nome =   teclado.nextLine();
+            res = nomes.add( nome );
+
+            if ( ! res ) 
+            {
+                System.out.println( "O nome não pode ser repetido." );
+                i--;
+            }
+        }
+
+        System.out.println( "No conjunto de nomes temos " + nomes.size() + "elementos" );
 
         for ( String nome : nomes ) 
         {
             System.out.println( nome );
         }
+
+        teclado.close();
     }    
 }

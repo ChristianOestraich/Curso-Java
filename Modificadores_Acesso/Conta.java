@@ -42,10 +42,10 @@ public class Conta
      */
     public void depositar( float valor )
     {
-        if ( valor >= this.saldo )
-        { 
+        synchronized ( this )
+        {
             this.saldo = this.saldo + valor;
-        }
+        }   
     }
 
     /**
