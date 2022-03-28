@@ -16,6 +16,11 @@ public class Pilha
         this.nomes.add( nome );
     }
 
+    public String pegaTopo()
+    {
+        return nomes.get( nomes.size() - 1 );
+    }
+
     /**
      * 
      * @return
