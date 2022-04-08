@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Programa76 
+public class Programa79 
 {
     public static void main( String[] args ) 
     {
@@ -14,6 +14,9 @@ public class Programa76
         cursos.add( new Curso( "Programação em Python: Essencial", 0 ) );
         cursos.add( new Curso( "Banco de Dados: Essencial", 0 ) );
 
-        cursos.stream().filter( c -> c.getAlunos() >= 100 ).forEach( System.out::println );
-    }    
+        cursos.stream()
+              .filter( c -> c.getAlunos() >= 100 )
+              .findAny()
+              .ifPresent( System.out::println );
+    }
 }

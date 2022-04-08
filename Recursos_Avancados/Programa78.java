@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Programa76 
+public class Programa78 
 {
     public static void main( String[] args ) 
     {
@@ -13,7 +13,12 @@ public class Programa76
         cursos.add( new Curso( "Programação em Java: Essencial", 0 ) );
         cursos.add( new Curso( "Programação em Python: Essencial", 0 ) );
         cursos.add( new Curso( "Banco de Dados: Essencial", 0 ) );
+        
+        int soma = cursos.stream()
+                         .filter( c -> c.getAlunos() >= 100 )
+                         .mapToInt( Curso::getAlunos )
+                         .sum();
 
-        cursos.stream().filter( c -> c.getAlunos() >= 100 ).forEach( System.out::println );
+        System.out.println( "A soma de todos os cursos com mais de 100 alunos é " + soma );
     }    
 }
